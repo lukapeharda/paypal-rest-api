@@ -1,0 +1,20 @@
+{
+    "name": "lukapeharda/paypal-rest-api",
+    "description": "PayPal REST API PHP SDK",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luka Peharda",
+            "email": "luka.peharda@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LukaPeharda\\PayPal\\" : "src/"
+        }
+    },
+    "require": {
+        "paypal/paypalhttp": "^1.0"
+    }
+}
