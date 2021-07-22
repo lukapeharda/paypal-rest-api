@@ -2,7 +2,7 @@
 
 SDK library for PayPal API v2. Create billing plans, products, subscriptions and orders. Convert webhook requests into events and objects.
 
-## Instalation
+## Installation
 
 Install using `composer` by running `composer required lukapeharda/paypal-rest-api`.
 
