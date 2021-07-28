@@ -4,7 +4,7 @@ SDK library for PayPal API v2. Create billing plans, products, subscriptions and
 
 ## Installation
 
-Install using `composer` by running `composer required lukapeharda/paypal-rest-api`.
+Install using `composer` by running `composer require lukapeharda/paypal-rest-api`.
 
 ## Usage
 
