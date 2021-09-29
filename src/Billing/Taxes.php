@@ -5,9 +5,9 @@ namespace LukaPeharda\PayPal\Billing;
 class Taxes
 {
     /**
-     * @var float
+     * @var string
      */
-    protected $percentage = 0;
+    protected $percentage = '0';
 
     /**
      * @var bool
@@ -26,7 +26,7 @@ class Taxes
         $taxes = new Taxes;
 
         if (isset($data['percentage'])) {
-            $taxes->setPercentage((float) $data['percentage']);
+            $taxes->setPercentage($data['percentage']);
         }
 
         if (isset($data['inclusive'])) {
@@ -52,7 +52,7 @@ class Taxes
     /**
      * Return tax percentage.
      *
-     * @return  float
+     * @return  string
      */
     public function getPercentage()
     {
@@ -62,7 +62,7 @@ class Taxes
     /**
      * Set tax percentage.
      *
-     * @param   float  $percentage
+     * @param   string  $percentage
      *
      * @return  self
      */

@@ -18,7 +18,7 @@ class Refund
     protected $status = 'PENDING';
 
     /**
-     * @var float
+     * @var string
      */
     protected $total;
 
@@ -57,7 +57,7 @@ class Refund
         }
 
         if (isset($data['amount'], $data['amount']['value'])) {
-            $refund->setValue((float) $data['amount']['value']);
+            $refund->setValue($data['amount']['value']);
         }
 
         if  (isset($data['amount'], $data['amount']['currency_code'])) {
@@ -125,7 +125,7 @@ class Refund
     /**
      * Return value amount.
      *
-     * @return  float
+     * @return  string
      */
     public function getValue()
     {
@@ -135,7 +135,7 @@ class Refund
     /**
      * Set value amount.
      *
-     * @param   float  $value
+     * @param   string  $value
      *
      * @return  self
      */

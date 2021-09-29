@@ -13,7 +13,7 @@ class Sale
     protected $id;
 
     /**
-     * @var float
+     * @var string
      */
     protected $total;
 
@@ -75,7 +75,7 @@ class Sale
         }
 
         if (isset($data['amount'], $data['amount']['total'])) {
-            $sale->setTotal((float) $data['amount']['total']);
+            $sale->setTotal($data['amount']['total']);
         }
 
         if (isset($data['amount'], $data['amount']['currency'])) {
@@ -349,7 +349,7 @@ class Sale
      */
     public function getGrossPrice()
     {
-        return $this->getTotal();
+        return (float) $this->getTotal();
     }
 
     /**

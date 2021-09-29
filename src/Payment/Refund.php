@@ -18,7 +18,7 @@ class Refund
     protected $state = 'pending';
 
     /**
-     * @var float
+     * @var string
      */
     protected $total;
 
@@ -57,7 +57,7 @@ class Refund
         }
 
         if (isset($data['amount'], $data['amount']['total'])) {
-            $refund->setTotal((float) $data['amount']['total']);
+            $refund->setTotal($data['amount']['total']);
         }
 
         if (isset($data['amount'], $data['amount']['currency'])) {

@@ -5,9 +5,9 @@ namespace LukaPeharda\PayPal\Billing;
 class FixedPrice
 {
     /**
-     * @var float
+     * @var string
      */
-    protected $value = 0;
+    protected $value = '0';
 
     /**
      * @var string
@@ -26,7 +26,7 @@ class FixedPrice
         $fixedPrice = new static();
 
         if (isset($data['value'])) {
-            $fixedPrice->setValue((float) $data['value']);
+            $fixedPrice->setValue($data['value']);
         }
 
         if (isset($data['currency_code'])) {
@@ -52,7 +52,7 @@ class FixedPrice
     /**
      * Return value amount.
      *
-     * @return  float
+     * @return  string
      */
     public function getValue()
     {
@@ -62,7 +62,7 @@ class FixedPrice
     /**
      * Set value amount.
      *
-     * @param   float  $value
+     * @param   string  $value
      *
      * @return  self
      */
