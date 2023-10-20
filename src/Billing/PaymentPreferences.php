@@ -55,7 +55,7 @@ class PaymentPreferences
         return [
             'auto_bill_outstanding' => $this->getAutoBillOutstanding(),
             'payment_failure_threshold' => $this->getPaymentFailureThreshold(),
-            'setup_fee' => $this->getSetupFee() && $this->getSetupFee()->getValue() > 0 ? $this->getSetupFee()->toArray() : null,
+            'setup_fee' => $this->getSetupFee() ? $this->getSetupFee()->toArray() : null,
         ];
     }
 
